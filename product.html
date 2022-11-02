@@ -182,7 +182,7 @@
                 item_category: "Chair",
                 item_category2: "Seat",
                 item_category3: product.id,
-                price: product.value,
+                price: `${product.value}`.slice(0, 2) * 1,
                 quantity: pcs_range.value * 1,
               }
             ],
@@ -190,7 +190,7 @@
             quantity: pcs_range.value * 1,
             price: product.value
           }
-          console.log('--- tag ---', tag)
+          console.log('--- tag --- \n', tag)
           gtag("event", "add_to_cart", tag);
         })
     </script>
